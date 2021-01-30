@@ -13,8 +13,10 @@ Widget.Header = styled.header`
     margin-bottom: 39px;
 `;
 
-Widget.Content = styled.span`
+Widget.Content = styled.div`
   font-size: 14px;
+  padding-right: 70px;
+  //text-align: ;
 `;
 
 export default Widget;
