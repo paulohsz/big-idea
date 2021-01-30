@@ -9,11 +9,12 @@ import { LogoHeader } from '../../Logo';
 const HeaderBackground = styled(Box)`
 
     height: 969px;
-    background-size: cover;
+    //background-size: cover;
     padding-top: 24px;
+    background-repeat:no-repeat;
     background-position: center;
     background-image: url('/image/header_bg.png');
-
+    background-color: #004892;
   .MuiContainer-root {
     padding-right: 0px !important; 
     padding-left: 0px;
