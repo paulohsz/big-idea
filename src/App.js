@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './component/home/Header';
 import Tip from './component/home/Tip';
 import RegisterNewsletter from './component/home/RegisterNewsletter';
+import Footer from './component/home/Footer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Tip />
       <RegisterNewsletter />
+      <Footer />
     </>
   );
 }
