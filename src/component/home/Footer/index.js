@@ -24,10 +24,17 @@ const FooterDivider = styled(Divider)`
     background-color: #a6cfed;
 `;
 
+const Copyright = styled(Box)`
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+`;
+
 function Footer() {
   return (
     <FooterBg>
       <Container maxWidth="md">
+
         <Box>
           <Logo />
         </Box>
@@ -71,11 +78,11 @@ function Footer() {
         </GridLink>
 
         <FooterDivider />
-        <Box textAlign="center" mt={2} style={{ fontSize: '12px' }}>
+        <Copyright>
           Copyright © 2020 - Razão Social Ltda. CNPJ 00.000.000/00001
           <br />
           Rua Lorem Ipsum, 162 - Bairro | Cidade-Estado - CEP: 00000-000
-        </Box>
+        </Copyright>
       </Container>
     </FooterBg>
   );

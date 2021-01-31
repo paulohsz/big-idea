@@ -6,6 +6,7 @@ const GridLink = styled(Grid)`
   padding-bottom: 65px;
   color: #fff;
 `;
+
 GridLink.Item = styled(Grid)`
 
     header {
