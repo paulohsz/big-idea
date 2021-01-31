@@ -11,10 +11,10 @@ const HeaderBackground = styled(Box)`
     height: 969px;
     //background-size: cover;
     padding-top: 24px;
-    background-repeat:no-repeat;
-    background-position: center;
-    background-image: url('/image/header_bg.png');
-    background-color: #004892;
+    background-image: url('/image/header_bg.png'), url('/image/header_bg_slice.png');
+    background-repeat: no-repeat, repeat-x;
+    background-position: center, top;
+
   .MuiContainer-root {
     padding-right: 0px !important; 
     padding-left: 0px;
