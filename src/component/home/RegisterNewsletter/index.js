@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
   Box, Container,
 } from '@material-ui/core';
-import WidgetNewsletter from './Widget';
+import WidgetNewsletter from './WidgetNewsletter';
 
 const NewsletterBg = styled(Box)`
     background-color: #e5edf2;
