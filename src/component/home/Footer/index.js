@@ -71,9 +71,13 @@ function Footer() {
           </GridLink.Item>
           <GridLink.Item item>
             <header>Redes Sociais</header>
-            <a href="https://www.facebook.com/" alt="Facebook" target="_blank" rel="noreferrer"><Facebook fontSize="large" /></a>
-            <a href="https://www.instagram.com/" alt="Instagram" target="_blank" rel="noreferrer"><Instagram fontSize="large" /></a>
-            <a href="https://www.linkedin.com/" alt="LinkedIn" target="_blank" rel="noreferrer"><LinkedIn fontSize="large" /></a>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" alt="Facebook" target="_blank" rel="noreferrer"><Facebook fontSize="large" /></a>
+                <a href="https://www.instagram.com/" alt="Instagram" target="_blank" rel="noreferrer"><Instagram fontSize="large" /></a>
+                <a href="https://www.linkedin.com/" alt="LinkedIn" target="_blank" rel="noreferrer"><LinkedIn fontSize="large" /></a>
+              </li>
+            </ul>
           </GridLink.Item>
         </GridLink>
 
