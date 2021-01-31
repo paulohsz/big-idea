@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const Logo = styled.img.attrs({
   src: 'image/logo.png',
-})`
-      height: 22px;
-      width: 139px;
-  `;
+  alt: 'Logo',
+  height: 22,
+  width: 139,
+})``;
 
 // eslint-disable-next-line import/prefer-default-export
 export const LogoHeader = styled(Logo)`

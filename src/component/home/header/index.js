@@ -23,10 +23,11 @@ const HeaderBackground = styled(Box)`
 
 const LanguageBrasil = styled.img.attrs({
   src: 'image/brazil.png',
+  alt: 'Language Brazil',
+  height: '23',
+  width: '108',
 })`
     margin-top: 6px;
-    height: 23px;
-    width: 108px;
 `;
 const LoginButton = styled(Button)`
   color: #fff;
