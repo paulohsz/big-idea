@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import {
   Box, Container,
 } from '@material-ui/core';
@@ -12,8 +13,14 @@ const NewsletterBg = styled(Box)`
         padding-left: 0px;
     }
 `;
+function RegisterNewsletter({ onSubNews }) {
+  const [email, setEmail] = useState('');
 
-function RegisterNewsletter() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    setEmail(onSubNews(email));
+  }
+
   return (
     <NewsletterBg>
       <Container maxWidth="md">
@@ -25,13 +32,20 @@ function RegisterNewsletter() {
             {/* eslint-disable-next-line max-len */}
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since...
           </WidgetNewsletter.Content>
-          <WidgetNewsletter.Input name="email" />
-          <WidgetNewsletter.Button>Button</WidgetNewsletter.Button>
+
+          <form onSubmit={(e) => handleSubmit(e)}>
+            <WidgetNewsletter.Input name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <WidgetNewsletter.Button type="submit">Button</WidgetNewsletter.Button>
+          </form>
         </WidgetNewsletter>
 
       </Container>
     </NewsletterBg>
   );
 }
+
+RegisterNewsletter.propTypes = {
+  onSubNews: PropTypes.func.isRequired,
+};
 
 export default RegisterNewsletter;

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import {
   Box, Button, Container, Grid,
 } from '@material-ui/core';
@@ -40,7 +41,13 @@ const LoginButton = styled(Button)`
   }
 `;
 
-function Header() {
+function Header({ submitRegister }) {
+  const [email, setEmail] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setEmail(submitRegister(email));
+  }
   return (
     <HeaderBackground>
       <Container maxWidth="md">
@@ -65,8 +72,16 @@ function Header() {
           <Widget>
             <Widget.Header as="h2">Comece com uma ideia e termine com um negócio.</Widget.Header>
             Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry....
-            <Widget.Input placeholder="Cadastre com seu e-mail" name="email" />
-            <Widget.Button>COMECE AGORA</Widget.Button>
+            <form onSubmit={(e) => handleSubmit(e)}>
+              <Widget.Input
+                placeholder="Cadastre com seu e-mail"
+                name="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <Widget.Button type="submit">COMECE AGORA</Widget.Button>
+            </form>
           </Widget>
         </Box>
 
@@ -74,5 +89,8 @@ function Header() {
     </HeaderBackground>
   );
 }
+Header.propTypes = {
+  submitRegister: PropTypes.func.isRequired,
+};
 
 export default Header;
